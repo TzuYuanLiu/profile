@@ -3,6 +3,8 @@ import {Component} from 'react'
 import Head from 'next/head'
 import styledNormalize from 'styled-normalize'
 import Typist from 'react-typist'
+import AvatarImage from '../components/common'
+
 
 const Container = styled.div`
 background: #00AE99;
@@ -42,12 +44,13 @@ font-family: 'VT323', monospace;
 
 const NavBar = styled.div`
 width: 100%;
-background: #ea7294;
+background: #dadada;
 height: 50px;
-color: white;
+color: #FC3057;
 display: flex;
 justify-content: space-around;
 align-items: center;
+box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
 `
 
 const ListContainer = styled.ul`
@@ -65,6 +68,7 @@ const Form = () => (
 
 const Logo = styled.div`
 font-size: 20px;
+color: #FC3057;
 `
 
 export default class Page extends Component {
@@ -142,14 +146,23 @@ export default class Page extends Component {
     return (
       <div>
        {this.renderHead()}
-        <NavBar>
+        {/* <NavBar>
           <Logo>Tzuyuan</Logo>
           <ListContainer style={{cursor: "pointer"}}>
             {this.renderList()}
           </ListContainer>
-        </NavBar>
+        </NavBar> */}
+        
         <Container>
-          {this.renderContent()} 
+          <AvatarImage />
+          <Dialog>
+            <Typist>
+            hihi, glad you are here,
+            ready to have a chat with me?
+            </Typist>
+            <button>Yes</button>
+            <button>no</button>
+        </Dialog>
         </Container>   
       </div>  
     )    

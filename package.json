@@ -9,6 +9,8 @@
     "next": "^4.1.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-typist": "^2.0.4",
+    "sass-loader": "^6.0.6",
     "styled-components": "^2.2.3",
     "styled-normalize": "^2.2.1"
   }
